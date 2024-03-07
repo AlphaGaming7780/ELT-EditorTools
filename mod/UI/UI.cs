@@ -6,7 +6,7 @@
 // using Game.UI;
 // using Unity.Collections;
 // using Unity.Entities;
-// namespace ELT_NetTool
+// namespace ELT_EditorTools
 // {
 	
 // 	public class UI : UISystemBase

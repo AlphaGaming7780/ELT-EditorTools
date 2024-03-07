@@ -9,8 +9,8 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
-		<AssemblyName>ELT_NetTool</AssemblyName>
-		<RootNamespace>ELT_NetTool</RootNamespace>
+		<AssemblyName>ELT_EditorTools</AssemblyName>
+		<RootNamespace>ELT_EditorTools</RootNamespace>
 		<Description>This ELT Extension give the player acces to the cool hidden game object.</Description>
 		<Version>0.1.0</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>

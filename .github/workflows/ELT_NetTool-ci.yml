@@ -1,4 +1,4 @@
-name: ELT_NetTool-ci
+name: ELT_EditorTools-ci
 
 on:
   push:

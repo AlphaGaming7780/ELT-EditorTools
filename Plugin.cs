@@ -8,7 +8,7 @@ using HarmonyLib;
 	using BepInEx.Unity.Mono;
 #endif
 
-namespace ELT_NetTool
+namespace ELT_EditorTools
 {
 	[BepInDependency("ExtraLandscapingTools")]
 	[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]

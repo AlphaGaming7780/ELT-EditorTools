@@ -16,7 +16,7 @@ using Colossal.OdinSerializer.Utilities;
 using MonoMod.RuntimeDetour;
 using Game.Tools;
 
-namespace ELT_NetTool
+namespace ELT_EditorTools
 {
 
 	[HarmonyPatch(typeof(GameManager), "Awake")]
@@ -29,7 +29,7 @@ namespace ELT_NetTool
 
 		static void Prefix(GameManager __instance)
 		{	
-			Extensions.RegisterELTExtension(new NetTool());
+			Extensions.RegisterELTExtension(new EditorTools());
 
 			if(File.Exists(pathToZip)) {
 				if(Directory.Exists(resources)) Directory.Delete(resources, true);
@@ -75,14 +75,6 @@ namespace ELT_NetTool
 				__result = true;
 			}
 
-			
-
-			// Plugin.Logger.LogMessage($"Name : {caller.Name}");
-			// Plugin.Logger.LogMessage($"FullName : {caller.GetFullName()}");
-			// Plugin.Logger.LogMessage($"FullDesc : {caller.FullDescription()}");
-			// Plugin.Logger.LogMessage($"NiceName : {caller.DeclaringType.GetNiceFullName()}");
-			// __result = true;
-			// return true;
 		}
 	}
 
