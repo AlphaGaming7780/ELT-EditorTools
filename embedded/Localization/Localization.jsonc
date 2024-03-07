@@ -1,0 +1,35 @@
+{
+	"Localization": {
+		"en-US": {
+			"Assets.NAME[Double Train Track - Twoway]": "Double Train Track (Station)",
+			"Assets.DESCRIPTION[Double Train Track - Twoway]": "Double track that allows trains to run in both directions simultaneously.",
+			"Assets.NAME[Oneway Tram Track - Inside]": "One-Way Tram Track (Without power lines)",
+			"Assets.DESCRIPTION[Oneway Tram Track - Inside]": "Single track t hat allows tram traffic to run in one direction at a time. Can be added to existing roads with the **Replace** Tool Mode.",
+			"Assets.NAME[Double Subway Track - Twoway]": "Double Subway Track (Station)",
+			"Assets.DESCRIPTION[Double Subway Track - Twoway]": "Double track that allows subway trains to run in both directions simultaneously.",
+			"Assets.DESCRIPTION[Twoway Subway Track]": "Twoway Subway Track",
+
+			"Assets.DESCRIPTION[Invisible Pedestrian Path]": "2 Direction | 1 Lane Ped Pedestrian Path.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+			"Assets.DESCRIPTION[Invisible Road Path - 2xTwoway]": "2 Direction | 2 lane Car and Pedestrian Road.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+			"Assets.DESCRIPTION[Invisible Road Path - 2xTwoway 2xPerpendicular]": "2 Direction | 2 lane Car and Pedestrian Road + Parking.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+			"Assets.DESCRIPTION[Invisible Car Path - 1xOneway]": "1 Direction | 1 lane Car Path.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+			"Assets.DESCRIPTION[Invisible Car Path - 1xTwoway]": "2 Direction | 1 lane Car Path.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+			"Assets.DESCRIPTION[Invisible Car Path - 2xTwoway]": "2 Direction | 2 lane Car Path.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+			"Assets.DESCRIPTION[Invisible Road Path - 1xTwoway]": "2 Direction | 1 lane Car | 2 Lane Pedestrian Road.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+			"Assets.DESCRIPTION[Invisible Road Path - 1xOneway]": "1 Direction | 1 Lane Car | 2 Lane Pedestrian Road.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+			"Assets.DESCRIPTION[Invisible Car Path - 1xOneway 1xBay]": "1 Direction | 2 lane Car Path.\n\nDO NOT PLACE THIS PATH ON A GROWABLE BUILDING. THE GAME WILL CRASH WHEN THE BUILDING UPGRADES/FINISHES CONSTRUCTION/ OR IS DESTROYED.",
+
+			"SubServices.NAME[Spaces]": "Spaces and Areas",
+			"Assets.SUB_SERVICE_DESCRIPTION[Spaces]": "Spaces and Functional Areas. When placed around a path citizens will use this area to alter their pathing. ",
+			"SubServices.NAME[Marker Object Prefabs]": "Markers and Object Prefabs",
+			"Assets.SUB_SERVICE_DESCRIPTION[Marker Object Prefabs]": "Integrated Stations, Building Markers, Spawn Points, etc.",
+
+			"Assets.NAME[Gympark Area]": "Gympark Area",
+			"Assets.DESCRIPTION[Walking Area]": "An area for your citizens to walk around in.",
+			"Assets.DESCRIPTION[Gympark Area]": "An area for your citizens to work out in.",
+			"Assets.DESCRIPTION[Clear Area]": "Unknown Functionality.",
+			"Assets.DESCRIPTION[Park Area]": "An area for your citizens to enjoy nature and greenery.",
+			"Assets.DESCRIPTION[Hangaround Area]": "An area for your citizens to relax and spend time together."
+		}
+	}
+}
