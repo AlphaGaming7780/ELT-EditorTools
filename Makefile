@@ -13,11 +13,11 @@ build: clean restore
 package-win:
 	@-mkdir dist
 	@cmd /c copy /y "bin\Debug\netstandard2.1\0Harmony.dll" "dist\"
-	@cmd /c copy /y "bin\Debug\netstandard2.1\ELT_Network.dll" "dist\"
+	@cmd /c copy /y "bin\Debug\netstandard2.1\ELT_NetTool.dll" "dist\"
 	@echo Packaged to dist/
 
 package-unix: build
 	@-mkdir dist
 	@cp bin/Debug/netstandard2.1/0Harmony.dll dist
-	@cp bin/Debug/netstandard2.1/ELT_Network.dll dist
+	@cp bin/Debug/netstandard2.1/ELT_NetTool.dll dist
 	@echo Packaged to dist/

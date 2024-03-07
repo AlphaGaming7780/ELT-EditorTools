@@ -11,8 +11,12 @@ using Game;
 using Game.Prefabs;
 using System;
 using Game.Net;
+using System.Diagnostics;
+using Colossal.OdinSerializer.Utilities;
+using MonoMod.RuntimeDetour;
+using Game.Tools;
 
-namespace ELT_Network
+namespace ELT_NetTool
 {
 
 	[HarmonyPatch(typeof(GameManager), "Awake")]
@@ -25,7 +29,7 @@ namespace ELT_Network
 
 		static void Prefix(GameManager __instance)
 		{	
-			Extensions.RegisterELTExtension(new Network());
+			Extensions.RegisterELTExtension(new NetTool());
 
 			if(File.Exists(pathToZip)) {
 				if(Directory.Exists(resources)) Directory.Delete(resources, true);
@@ -61,10 +65,31 @@ namespace ELT_Network
 		}
 	}
 
-	[HarmonyPatch(typeof(SystemOrder), "Initialize")]
-	public static class SystemOrderPatch {
-		public static void Postfix(UpdateSystem updateSystem) {
-			updateSystem.UpdateAt<UI>(SystemUpdatePhase.UIUpdate);
+	[HarmonyPatch(typeof(GameModeExtensions), "IsEditor")]
+	public class GameModeExtensions_IsEditor
+	{
+		public static void Postfix(ref bool __result) {
+
+			MethodBase caller = new StackFrame(2, false).GetMethod();
+			if((caller.DeclaringType == typeof(NetToolSystem) && caller.Name == "GetNetPrefab")) {
+				__result = true;
+			}
+
+			
+
+			// Plugin.Logger.LogMessage($"Name : {caller.Name}");
+			// Plugin.Logger.LogMessage($"FullName : {caller.GetFullName()}");
+			// Plugin.Logger.LogMessage($"FullDesc : {caller.FullDescription()}");
+			// Plugin.Logger.LogMessage($"NiceName : {caller.DeclaringType.GetNiceFullName()}");
+			// __result = true;
+			// return true;
 		}
 	}
+
+	// [HarmonyPatch(typeof(SystemOrder), "Initialize")]
+	// public static class SystemOrderPatch {
+	// 	public static void Postfix(UpdateSystem updateSystem) {
+	// 		updateSystem.UpdateAt<UI>(SystemUpdatePhase.UIUpdate);
+	// 	}
+	// }
 }

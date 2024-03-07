@@ -1,11 +1,11 @@
-name: ELT_Network-ci
+name: ELT_NetTool-ci
 
 on:
   push:
-    branches: [ "DEV" ]
+    # branches: [ "DEV" ]
     tags: [ "v*" ]
 env:
-  RELEASE_TAG: ${{ github.ref == 'refs/heads/DEV' && 'v0.1.0-pre-5' || github.ref_name }}
+  RELEASE_TAG: ${{ github.ref == 'refs/heads/DEV' && 'v0.1.0-pre-1' || github.ref_name }}
   ELT_RELEASE_TYPE: ${{ github.ref == 'refs/heads/DEV' && 'draft' || 'prerelease, draft' }}
 
 jobs:

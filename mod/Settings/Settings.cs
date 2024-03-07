@@ -1,7 +1,7 @@
-using ExtraLandscapingTools;
+// using ExtraLandscapingTools;
 
-namespace ELT_Network;
+// namespace ELT_NetTool;
 
-public class NetworkSettings : ExtensionSettings {
-    public bool ShowUnTestedObject = false;
-}
+// public class NetToolSettings : ExtensionSettings {
+//     public bool ShowUnTestedObject = false;
+// }

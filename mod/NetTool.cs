@@ -4,32 +4,31 @@ using System.IO;
 using System.Reflection;
 using Colossal.Json;
 using ExtraLandscapingTools;
-using ExtraLandscapingTools.UI;
 using Game.Net;
 using Game.Prefabs;
 using static ExtraLandscapingTools.Extensions;
-namespace ELT_Network
+namespace ELT_NetTool
 {
-	public class Network : Extension
+	public class NetTool : Extension
 	{
-		public override ExtensionType Type => ExtensionType.Assets;
+		public override ExtensionType Type => ExtensionType.Other;
         public override string ExtensionID => MyPluginInfo.PLUGIN_NAME;
-        internal NetworkSettings ExtensionSettings;
-        public override SettingsUI UISettings => new("ELT Network", [
-			new SettingsCheckBox("Show untested object", "elt_networks.showuntestedobject")
-		]);
+        // internal NetworkSettings ExtensionSettings;
+        // public override SettingsUI UISettings => new("ELT Network", [
+		// 	new SettingsCheckBox("Show untested object", "elt_netTool.showuntestedobject")
+		// ]);
 
-		internal static Network network;
+		internal static NetTool network;
 
         protected override void OnCreate()
         {	
 			network = this;
-			ExtensionSettings = LoadSettings( new NetworkSettings() );
+			// ExtensionSettings = LoadSettings( new NetworkSettings() );
             base.OnCreate();
         }
 
         internal static Stream GetEmbedded(string embeddedPath) {
-			return Assembly.GetExecutingAssembly().GetManifestResourceStream($"ELT_Network.embedded.{embeddedPath}");	
+			return Assembly.GetExecutingAssembly().GetManifestResourceStream($"ELT_NetTool.embedded.{embeddedPath}");	
 			// return Assembly.GetExecutingAssembly().GetManifestResourceStream($"{Assembly.GetExecutingAssembly().GetName().Name}.embedded.{embeddedPath}");	
 		}
 
@@ -40,7 +39,6 @@ namespace ELT_Network
 
         public override bool OnAddPrefab(PrefabBase prefab)
 		{	
-
 			try {
 
 				if (
