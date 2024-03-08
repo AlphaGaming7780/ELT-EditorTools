@@ -15,6 +15,7 @@ using System.Diagnostics;
 using Colossal.OdinSerializer.Utilities;
 using MonoMod.RuntimeDetour;
 using Game.Tools;
+using Game.UI.InGame;
 
 namespace ELT_EditorTools
 {
@@ -64,6 +65,19 @@ namespace ELT_EditorTools
 			);
 		}
 	}
+
+	[HarmonyPatch( typeof( ToolUISystem ), "OnPrefabChanged", typeof(PrefabBase) )]
+	class ToolUISystem_OnPrefabChanged
+	{
+		private static void Postfix(PrefabBase prefab) {
+			Plugin.Logger.LogMessage(prefab);
+
+			foreach(ComponentBase componentBase in prefab.components) {
+				Plugin.Logger.LogMessage(componentBase);
+			}
+
+		}
+	}	
 
 	[HarmonyPatch(typeof(GameModeExtensions), "IsEditor")]
 	public class GameModeExtensions_IsEditor

@@ -42,7 +42,9 @@ namespace ELT_EditorTools
 			try {
 
 				if (
-					prefab is not NetLanePrefab
+					prefab is not NetLanePrefab ||
+					prefab.GetComponent<Game.Prefabs.TrackLane>() != null ||
+					prefab.GetComponent<Game.Prefabs.UtilityLane>() != null
 				) {	
 					return true;
 				}
