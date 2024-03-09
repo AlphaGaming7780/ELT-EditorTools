@@ -66,18 +66,19 @@ namespace ELT_EditorTools
 		}
 	}
 
-	[HarmonyPatch( typeof( ToolUISystem ), "OnPrefabChanged", typeof(PrefabBase) )]
-	class ToolUISystem_OnPrefabChanged
-	{
-		private static void Postfix(PrefabBase prefab) {
-			Plugin.Logger.LogMessage(prefab);
+	// [HarmonyPatch( typeof( ToolUISystem ), "OnPrefabChanged", typeof(PrefabBase) )]
+	// class ToolUISystem_OnPrefabChanged
+	// {
+	// 	private static void Postfix(PrefabBase prefab) {
+	// 		Plugin.Logger.LogMessage(prefab);
 
-			foreach(ComponentBase componentBase in prefab.components) {
-				Plugin.Logger.LogMessage(componentBase);
-			}
+	// 		foreach(ComponentBase componentBase in prefab.components) {
+	// 			Plugin.Logger.LogMessage(componentBase);
+	// 		}
+	// 		Plugin.Logger.LogMessage("");
 
-		}
-	}	
+	// 	}
+	// }	
 
 	[HarmonyPatch(typeof(GameModeExtensions), "IsEditor")]
 	public class GameModeExtensions_IsEditor
