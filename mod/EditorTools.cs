@@ -43,15 +43,15 @@ namespace ELT_EditorTools
 
 				if (
 					prefab is not NetLanePrefab ||
-					prefab.GetComponent<Game.Prefabs.TrackLane>() != null ||
 					(
 						prefab.GetComponent<LaneDeterioration>() == null &&
 						prefab.GetComponent<SpawnableLane>() == null &&
-						prefab.GetComponent<Game.Prefabs.SecondaryLane>() == null
+						prefab.GetComponent<Game.Prefabs.SecondaryLane>() == null &&
+						prefab.GetComponent<Game.Prefabs.TrackLane>() == null // For the crash icon.
 
 					)
 				) {	
-					return true;
+					return base.OnAddPrefab(prefab);
 				}
 
 				var prefabUI = prefab.GetComponent<UIObject>();
@@ -64,7 +64,8 @@ namespace ELT_EditorTools
 					prefabUI.m_Priority = 1;
 				}
 
-				if(prefab is NetLanePrefab) prefabUI.m_Group ??= Prefab.GetOrCreateNewToolCategory(prefab, "Landscaping", "NetLanePrefab", "Pathways");
+				if(prefab.GetComponent<Game.Prefabs.TrackLane>() != null) return base.OnAddPrefab(prefab);
+				else if(prefab is NetLanePrefab) prefabUI.m_Group ??= Prefab.GetOrCreateNewToolCategory(prefab, "Landscaping", "NetLanePrefab", "Pathways");
 				else prefabUI.m_Group ??= Prefab.GetOrCreateNewToolCategory(prefab, "Landscaping", "[ELT - NetTool]Failed Prefab, IF you see this tab, repport it, it's a bug.");
 				
 				if(prefabUI.m_Group == null) {
@@ -80,6 +81,8 @@ namespace ELT_EditorTools
 		{
 
 			if(File.Exists($"{GameManager_Awake.resourcesIcons}/{prefab.GetType().Name}/{prefab.name}.svg")) return $"{GameManager_InitializeThumbnails.COUIBaseLocation}/resources/Icons/{prefab.GetType().Name}/{prefab.name}.svg";
+
+			if(prefab.GetComponent<Game.Prefabs.TrackLane>() != null) return Icons.GameCrashWarning;
 
 			return null;
 		}
