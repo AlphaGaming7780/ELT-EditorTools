@@ -48,7 +48,7 @@
         <Reference Include="$(Cities2_Location)\Cities2_Data\Managed\Game.dll" Private="False" />
         <Reference Include="$(Cities2_Location)\Cities2_Data\Managed\Unity.*.dll" Private="False" />
 		<Reference Include="cohtml.Net"><HintPath>$(Cities2_Location)\Cities2_Data\Managed\cohtml.Net.dll</HintPath><Private>False</Private></Reference>
-		<Reference Include="$(Cities2_Location)\BepInEx\_plugins\ExtraLandscapingTools\ExtraLandscapingTools.dll" Private="False"/>
+		<Reference Include="$(Cities2_Location)\BepInEx\plugins\ExtraLandscapingTools\ExtraLandscapingTools.dll" Private="False"/>
 	</ItemGroup>
 	
 
