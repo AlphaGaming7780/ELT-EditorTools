@@ -4,6 +4,7 @@ using System.IO;
 using System.Reflection;
 using Colossal.Json;
 using ExtraLandscapingTools;
+using ExtraLandscapingTools.UI;
 using Game.Net;
 using Game.Prefabs;
 using static ExtraLandscapingTools.Extensions;
